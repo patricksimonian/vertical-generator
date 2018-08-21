@@ -53,4 +53,5 @@ const mapDispatchToProps = dispatch => {
         removeWebsite: (id) => dispatch(actions.deleteWebsite(id))
     }
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Websites);

@@ -35,5 +35,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchPalettes: () => dispatch(actions.fetchColorPalettes())
   }
 }
+const loadingComponent = withLoader(App, null, 'Downloading To Local...');
 
-export default connect(mapStateToProps, mapDispatchToProps)(withLoader(App, null, 'Downloading To Local...'));
+export default connect(mapStateToProps, mapDispatchToProps)(loadingComponent);
