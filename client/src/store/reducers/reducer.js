@@ -94,6 +94,11 @@ const generateWebsites = (state) => {
     return updateObject(state, {websites});
 }
 
+const deleteWebsite = (state, id) => {
+    const websites = state.websites.filter(ws => ws.id !== id);
+    return updateObject(state, {websites});
+}
+
 const changeCheckoutForWebsite = (state, id, checkout) => {
     const websites = state.websites.map(ws => {
         if(ws.id === id) {
@@ -126,12 +131,13 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SET_DEFAULT_CHECKOUT: return setDefaultCheckout(state, action.payload.checkout);
         case actionTypes.RESET_CONTROL: return resetControls(state);
         case actionTypes.GENERATE_WEBSITES: return generateWebsites(state);
+        case actionTypes.DELETE_WEBSITE: return deleteWebsite(state, action.payload.id);
         case actionTypes.CHANGE_WEBSITE_CHECKOUT: return changeCheckoutForWebsite(state, action.payload.id, action.payload.checkout);
         case actionTypes.FETCH_COLOR_PALETTES_SUCCESS: return setColorPalettes(state, action.payload.palettes);
         case actionTypes.DOWNLOAD_WEBSITES_START: return setLoading(state);
         case actionTypes.DOWNLOAD_WEBSITES_SUCCESS: return clearWebsites(state);
+        default: return initialState;
     }
-    return state;
 }
 
 export default reducer;

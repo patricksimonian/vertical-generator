@@ -4,13 +4,31 @@
     box-shadow: 0 0 2px 2px #ccc;
     box-sizing: border-box;
     margin: 10px;
+    position: relative;
 }
 .Website h1 {
     text-align: center;
     font-size: 16px;
     margin-bottom: 5px;
 }
+.Website .Delete {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #e42929;
+    font-size: 16px;
+    font-weight: 600;
+    top: 0;
+    right: 0;
+    border: none;
+    cursor: pointer;
+}
 
+.Website .Delete:hover {
+    background-color: #db262b;
+}
 @media screen and (min-width: 500px) {
     .Website {
         width: 250px;

@@ -78,7 +78,15 @@ export const changeWebsiteCheckout = (id, checkout) => {
         }
     }
 }
-
+ 
+export const deleteWebsite = (id) => {
+    return {
+        type: actionTypes.DELETE_WEBSITE,
+        payload: {
+            id
+        }
+    }
+}
 // color palettes
 export const fetchColorPalettesStart = () => {
     return {

@@ -18,7 +18,7 @@ const Websites = (props) => {
                 vertical={ws.vertical}
                 selectedCheckout={ws.selectedCheckout}
                 onDeleteHandler={() => {
-    
+                    props.removeWebsite(ws.id);
                 }}
                 checkoutChanged={(checkout) => {
                     console.log(props);
@@ -49,7 +49,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        websiteCheckoutChanged: (id, checkout) => dispatch(actions.changeWebsiteCheckout(id, checkout))
+        websiteCheckoutChanged: (id, checkout) => dispatch(actions.changeWebsiteCheckout(id, checkout)),
+        removeWebsite: (id) => dispatch(actions.deleteWebsite(id))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Websites);
