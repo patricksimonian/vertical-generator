@@ -1,0 +1,38 @@
+{
+  "name": "vertical-generator-server",
+  "version": "1.0.0",
+  "description": "Server for file generation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "",
+    "server": "node app.js",
+    "client": "cd client && npm start",
+    "dev": "./node_modules/.bin/concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "author": "Patrick Simonian",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "color": "^3.0.0",
+    "concurrently": "^3.6.1",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.0.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "ncp": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-nodemon": "^2.2.1",
+    "nodemon": "^1.17.5"
+  }
+}

@@ -1,0 +1,220 @@
+ [
+    {
+      "name": "Post Modern",
+      "id": "POST_MODERN",
+      "primary": {
+        "hex": "#4E9231",
+        "rgb": "rgb(78, 146, 49)"
+      },
+      "secondary": {
+        "hex": "#26596A",
+        "rgb": "rgb(38, 89, 106)"
+      },
+      "tertiary": {
+        "hex": "#AA7339",
+        "rgb": "rgb(170, 115, 57)"
+      },
+      "compliment": {
+        "hex": "#9F3548",
+        "rgb": "rgb(159, 53, 72)"
+      },
+      "colors": [
+        {
+          "name": "primary",
+          "hex": "#4E9231",
+          "rgb": "rgb(78, 146, 49)"
+        },  
+        {
+          "name": "secondary",
+          "hex": "#26596A",
+          "rgb": "rgb(38, 89, 106)"
+        },
+        {
+          "name": "tertiary",
+          "hex": "#AA7339",
+          "rgb": "rgb(170, 115, 57)"
+        },
+        {
+          "name": "compliment",
+          "hex": "#9F3548",
+          "rgb": "rgb(159, 53, 72)"
+        } 
+      ] 
+    },
+    {
+      "name": "Orangina",
+      "id": "ORANGINA",
+      "primary": {
+        "hex": "#FF851C",
+        "rgb": "rgb(255, 133, 28)"
+      },
+      "secondary": {
+        "hex": "#FFC11C",
+        "rgb": "rgb(255, 193, 28)"
+      },
+      "tertiary": {
+        "hex": "#3445E3",
+        "rgb": "rgb(52, 69, 227)"
+      },
+      "compliment": {
+        "hex": "#19D2DB",
+        "rgb": "rgb(25, 210, 219)"
+      },
+      "colors": [
+        {
+          "name": "primary",
+          "hex": "#FF851C",
+          "rgb": "rgb(255, 133, 28)"
+        },  
+        {
+          "name": "secondary",
+          "hex": "#FFC11C",
+          "rgb": "rgb(255, 193, 28)"
+        },
+        {
+          "name": "tertiary",
+          "hex": "#3445E3",
+          "rgb": "rgb(52, 69, 227)"
+        },
+        {
+          "name": "compliment",
+          "hex": "#19D2DB",
+          "rgb": "rgb(25, 210, 219)"
+        } 
+      ] 
+    },
+    {
+      "name": "Tropical",
+      "id": "TROPICAL",
+      "primary": {
+        "hex": "#00B76D",
+        "rgb": "rgb(0, 183, 109)"
+      },
+      "secondary": {
+        "hex": "#0582AB",
+        "rgb": "rgb(5, 130, 171)"
+      },
+      "tertiary": {
+        "hex": "#2EDB00",
+        "rgb": "rgb(46, 219, 0)"
+      },
+      "compliment": {
+        "hex": "#61DA41",
+        "rgb": "rgb(97, 218, 65)"
+      },
+      "colors": [
+        {
+          "name": "primary",
+          "hex": "#00B76D",
+          "rgb": "rgb(0, 183, 109)"
+        },  
+        {
+          "name": "secondary",
+          "hex": "#0582AB",
+          "rgb": "rgb(5, 130, 171)"
+        },
+        {
+          "name": "tertiary",
+          "hex": "#2EDB00",
+          "rgb": "rgb(46, 219, 0)"
+        },
+        {
+          "name": "compliment",
+          "hex": "#61DA41",
+          "rgb": "rgb(97, 218, 65)"
+        } 
+      ],  
+      "text": {
+        "hex": "#222",
+        "rgb": "rgb(34, 34, 34)"
+      }
+    },
+    {
+      "name": "Daquiri",
+      "id": "DAQUIRI",
+      "primary": {
+        "hex": "#FF580C",
+        "rgb": "rgb(255, 88, 12)"
+      },
+      "secondary": {
+        "hex": "#FFBC0C",
+        "rgb": "rgb(255, 188, 12)"
+      },
+      "tertiary": {
+        "hex": "#C8098E",
+        "rgb": "rgb(200, 9, 142)"
+      },
+      "compliment": {
+        "hex": "#C3499E",
+        "rgb": "rgb(195, 73, 158)"
+      },
+      "colors": [
+        {
+          "name": "primary",
+          "hex": "#FF580C",
+          "rgb": "rgb(255, 88, 12)"
+        },  
+        {
+          "name": "secondary",
+          "hex": "#FFBC0C",
+          "rgb": "rgb(255, 188, 12)"
+        },
+        {
+          "name": "tertiary",
+          "hex": "#C8098E",
+          "rgb": "rgb(200, 9, 142)"
+        },
+        {
+          "name": "compliment",
+          "hex": "#C3499E",
+          "rgb": "rgb(195, 73, 158)"
+      } 
+      ],  
+      "text": {
+        "hex": "#222",
+        "rgb": "rgb(34, 34, 34)"
+      }
+    },
+    {
+      "name": "Desert",
+      "id": "DESERT",
+      "primary": {
+        "hex": "#3F4F4A",
+        "rgb": "rgb(63, 79, 74)"
+      },
+      "secondary": {
+        "hex": "#7F7B71",
+        "rgb": "rgb(127, 123, 113)"
+      },
+      "tertiary": {
+        "hex": "#FAE9F3",
+        "rgb": "rgb(250, 233, 243)"
+      },
+      "compliment": {
+        "hex": "#FFB188",
+        "rgb": "rgb(255, 177, 136)"
+      },
+      "colors": [
+        {
+          "name": "primary",
+          "hex": "#3F4F4A",
+          "rgb": "rgb(63, 79, 74)"
+        },  
+        {
+          "name": "secondary",
+          "hex": "#7F7B71",
+          "rgb": "rgb(127, 123, 113)"
+        },
+        {
+          "name": "tertiary",
+          "hex": "#FAE9F3",
+          "rgb": "rgb(250, 233, 243)"
+        },
+        {
+          "name": "compliment",
+          "hex": "#FFB188",
+          "rgb": "rgb(255, 177, 136)"
+        } 
+      ] 
+    }
+  ]

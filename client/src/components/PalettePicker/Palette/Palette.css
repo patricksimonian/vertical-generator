@@ -1,0 +1,26 @@
+.Palette {
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding-top: 4px;
+    box-sizing: border-box;
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+.Palette .squares {
+    display: grid;
+    height: 125px;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+}
+
+.Palette .squares > div {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

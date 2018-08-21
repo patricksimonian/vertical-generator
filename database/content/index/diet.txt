@@ -1,0 +1,114 @@
+    <main class="main-content">
+        <div class="container">
+            <div class="panel spotlight">
+                <div class="panel__content">
+                    <div class="row row--three row--alt">
+                        <div class="column">
+                            <div class="spotlight__products product-two">
+                                <div class="product__picture"></div>
+                                <div class="product__picture"></div>
+                            </div>
+                            <div class="spotlight__model"></div>
+                        </div>
+                        <div class="column">
+                            <div class="spotlight__arrow">Claim your bottle today!</div>
+                        </div>
+                        <div class="column">
+                            <div class="panel">
+                                <div class="panel__header">Tell us where to send
+                                    <br><span>your Package</span></div>
+                                <div class="panel__content">
+                                    <form class="spotlight__form" name="landingPageForm" ng-submit="landingPageSubmitHandler($event)">
+                                        <label for="shippingFirstName">First Name:</label>
+                                        <input type="text" class="required input-text" id="shippingFirstName" name="shippingFirstName" autofocus required placeholder="First Name" data-error-message="Please enter your first name!" ng-model="FormData.firstName">
+                                        <br>
+                                        <label for="shippingLastName">Last Name:</label>
+                                        <input type="text" class="required input-text" id="shippingLastName" name="shippingLastName" required placeholder="Last Name" data-error-message="Please enter your last name!" ng-model="FormData.lastName">
+                                        <br>
+                                        <label for="shippingAddress1">Address:</label>
+                                        <input type="text" class="required input-text" id="shippingAddress1" name="shippingAddress1" required placeholder="Address" data-error-message="Please enter your address!" ng-model="FormData.address">
+                                        <br>
+                                        <label for="shippingCity">City:</label>
+                                        <input type="text" class="required input-text" id="shippingCity" name="shippingCity" required placeholder="City" data-error-message="Please enter your city!" ng-model="FormData.city">
+                                        <br>
+                                        <label for="shippingCountry">Country:</label>
+                                        <select class="input-text input-select" id="shippingCountry" name="shippingCountry" required ng-change="getStates()" ng-model="FormData.country" ng-options="countryData.country_code as countryData.country_name for countryData in countriesData">
+                                            <option value="" selected>Select Country</option>
+                                        </select>
+                                        <br>
+                                        <label for="shippingState">State:</label>
+                                        <select class="input-text input-select" id="shippingState" name="shippingState" required ng-model="FormData.state" ng-options="stateData.state_code as stateData.state_name for stateData in statesData">
+                                            <option selected value="">Select State</option>
+                                        </select>
+                                        <br>
+                                        <label for="shippingZip">ZIP:</label>
+                                        <input type="text" class="required input-text" id="shippingZip" name="shippingZip" required placeholder="Zip Code" onkeyup="this.value = this.value.replace(/[^0-9\.-]/g, '')" maxlength="5" data-min-length="5" data-error-message="Please enter a valid zip code!" ng-model="FormData.zip">
+                                        <br>
+                                        <label for="shippingPhoneNumber">Phone:</label>
+                                        <input type="text" class="required input-text" id="shippingPhoneNumber" name="shippingPhoneNumber" required placeholder="Phone" onkeyup="this.value = this.value.replace(/[^0-9\.-]/g, '')" data-validate="phone" data-min-length="10" maxlength="11" data-max-length="15" data-error-message="Please enter a valid contact number!" ng-model="FormData.phone">
+                                        <br>
+                                        <label for="shippingEmailAddress">Email:</label>
+                                        <input type="text" class="required input-text" id="shippingEmailAddress" name="shippingEmailAddress" required placeholder="Email Address" ng-model="FormData.email">
+                                        <br>
+                                                          <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" required ng-model="FormData.agreeCheckbox">
+                    <label for="agreeCheckbox"></label>
+                    <label for="agreeCheckbox"><span class="agree">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a>. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</span></label>
+                                        <button class="button" name="submit">Order Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel feature">
+            <div class="panel__content">
+                <div class="row row--three">
+                    <div class="column">
+                        <div class="icons row">
+                            <div class="column">
+                                <div class="icon fa fa-trophy"></div>
+                                <h3>Value</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="feature__info">
+                            <h2>What Is [[funnel_name]]?</h2>
+                            <p>The [[funnel_name]] supplement is the product of a combination of pure Garcinia Cambogia extract in addition to other active ingredients in optimal proportions. The Garcinia Cambogia, which is a pumpkin shaped fruit native to South-East Asia and India, is used due to the rinds rich levels of Hydroxycitric Acid, which in turn may help in natural weight management along with the added possible benefits such as potential appetite suppression and increase in the body's energy levels.</p>
+                            <p>[[funnel_name]] is a Garcinia Cambogia-based supplement that also includes optimal proportions of other active ingredients. Used by adults 18 years old and above, it is a fitting complement to regular workouts and a balanced diet.</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="feature__info">
+                            <ul>
+                                <li><span class="accent-color">May Help</span> Expidite Vitality</li>
+                                <li><span class="accent-color">May Help</span> Nurture Weight Loss</li>
+                                <li><span class="accent-color">May Help</span> Reinforce Overall Health</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel extra">
+            <div class="panel__content">
+                <div class="row row--three">
+                    <div class="column">
+                        <div class="extra__products product-three">
+                            <div class="product__picture"></div>
+                            <div class="product__picture"></div>
+                            <div class="product__picture"></div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="extra__logo"></div>
+                    </div>
+                    <div class="column">
+                        <button type="button" data-scroll-top class="button">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

@@ -1,0 +1,2 @@
+# Custom site-specific .htaccess rules go here. These rules will only affect the deployed site, but not the Sandbox.
+# ----- Write BELOW this line -----

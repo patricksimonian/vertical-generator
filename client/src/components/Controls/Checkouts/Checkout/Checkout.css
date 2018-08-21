@@ -1,0 +1,14 @@
+
+.Checkout {
+    display: flex;
+}
+
+.Checkout label {
+    order: 2;
+    font-weight: 300;
+}
+.Checkout input {
+    order: 1;
+    margin-right: 15px;
+    width: initial;
+}

@@ -1,0 +1,261 @@
+    <main class="main-content">
+        <div class="container">
+          <div class="panel spotlight">
+            <div class="panel__content">
+              <div class="row row--two row--alt row--start">
+                <div class="column">
+                  <div class="row row--one">
+                    <div class="column">
+                      <div class="spotlight__info" ng-init="package = 'unselected'">
+                        <div calss="active" data-product data-product-price="0.00" data-shipping-price="0.00" data-product-id="-1" data-product-qty="1"></div>
+                        <div class="row">
+                          <label class="package" ng-click="package = 'trial'" data-product data-product-price="[[crm_product_price_1]]" data-shipping-price="[[crm_product_shipping_price_1]]" data-product-id="[[crm_product_id_1]]" data-product-qty="1">
+                            <input type="radio" name="package" checked ng-model="package" style="display: none;">
+                            <div class="package__header">
+                              <h2>[[product_name_1]]</h2>
+                            </div>
+                            <div class="package__body row row--three">
+                              <div class="column package__control">
+                                <input type="radio" id="trial-product" name="product_selection" ng-model="package" ng-checked="package === 'trial'" value="active">
+                                <label for="trial-product" ng-click="package = 'trial'"></label>
+                              </div>
+                              <div class="column">
+                                <div class="product__picture"></div>
+                              </div>
+                              <div class="column package__price">
+                                <strong>TOTAL</strong><br>
+                                [[currency]][[crm_product_price_1]] + [[currency]][[crm_product_shipping_price_1]] S&H
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="row">
+                          <label class="package" ng-click="package = 'membership1'" data-product data-product-price="[[crm_product_price_2]]" data-shipping-price="[[crm_product_shipping_price_2]]" data-product-id="[[crm_product_id_2]]" data-product-qty="1" data-product-multiply-qty="true">
+                            <div class="package__header">
+                              <h2>[[product_name_2]]</h2>
+                            </div>
+                            <div class="package__body row row--three">
+                              <div class="column package__control">
+                                <input type="radio" id="membership1-product" name="product_selection" ng-model="membership1" ng-checked="package === 'membership1'" value="active">
+                                <label for="membership1-product" ng-click="package = 'membership1'"></label>
+                              </div>
+                              <div class="column">
+                                <div class="product__picture"></div>
+                              </div>
+                              <div class="column package__price">
+                                <strong>TOTAL</strong>
+                                <br> [[currency]][[crm_product_price_2]] (free shipping)
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="row">
+                          <label class="package" ng-click="package = 'membership3'" data-product data-product-price="[[crm_product_price_3]]" data-shipping-price="[[crm_product_shipping_price_3]]" data-product-id="[[crm_product_id_3]]" data-product-qty="1" data-product-multiply-qty="true">
+                            <input type="radio" name="package" ng-model="package" style="display: none;">
+                            <div class="package__header">
+                              <h2>[[product_name_3]]</h2>
+                            </div>
+                            <div class="package__body row row--three">
+                              <div class="column package__control">
+                                <input type="radio" id="membership3-product" name="product_selection" ng-model="membership3" ng-checked="package === 'membership3'" value="active">
+                                <label for="membership3-product" ng-click="package = 'membership3'"></label>
+                              </div>
+                              <div class="column">
+                                <div class="package__products product-three">
+                                  <div class="product__picture"></div>
+                                  <div class="product__picture"></div>
+                                  <div class="product__picture"></div>
+                                </div>
+                              </div>
+                              <div class="column package__price">
+                                <strong>TOTAL</strong><br>
+                                [[currency]][[crm_product_price_3]] (free shipping)
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="row">
+                          <label class="package" ng-click="package = 'membership5'" data-product data-product-price="[[crm_product_price_4]]" data-shipping-price="[[crm_product_shipping_price_4]]" data-product-id="[[crm_product_id_4]]" data-product-qty="1" data-product-multiply-qty="true">
+                            <input type="radio" name="package" ng-model="package" style="display: none;">
+                            <div class="package__header">
+                              <h2>[[product_name_4]]</h2>
+                            </div>
+                            <div class="package__body row row--three">
+                              <div class="column package__control">
+                                <input type="radio" id="membership5-product" name="product_selection" ng-model="membership5" ng-checked="package === 'membership5'" value="active">
+                                <label for="membership5-product" ng-click="package = 'membership5'"></label>
+                              </div>
+                              <div class="column">
+                                <div class="package__products product-five">
+                                  <div class="product__picture"></div>
+                                  <div class="product__picture"></div>
+                                  <div class="product__picture"></div>
+                                  <div class="product__picture"></div>
+                                  <div class="product__picture"></div>
+                                </div>
+                              </div>
+                              <div class="column package__price">
+                                <strong>TOTAL</strong><br>
+                                [[currency]][[crm_product_price_4]] (free shipping)
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="row">
+                        <label class="package" ng-click="package = 'sample'" data-product data-product-price="[[crm_product_price_5]]" data-shipping-price="[[crm_product_shipping_price_5]]" data-product-id="[[crm_product_id_5]]" data-product-qty="1" data-product-multiply-qty="true">
+                          <input type="radio" name="package" ng-model="package" style="display: none;">
+                          <div class="package__header">
+                            <h2>[[product_name_5]]</h2>
+                          </div>
+                          <div class="package__body row row--three">
+                              <div class="column package__control">
+                                  <input type="radio" id="sample-product" name="product_selection" ng-model="sample" ng-checked="package === 'sample'" value="active">
+                                  <label for="sample-product" ng-click="package = 'sample'"></label>
+                              </div>
+                            <div class="column">
+                              <div class="product__picture"></div>
+                            </div>
+                            <div class="column package__price">
+                              <strong>TOTAL</strong><br>
+                              [[currency]][[crm_product_price_5]] (free shipping)
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spotlight__info spotlight__terms">
+                    <h3>Order Summary</h3>
+                    <hr>
+                    <div class="row row--two">
+                      <div class="column">
+                        Sub-Total
+                      </div>
+                      <div class="column">
+                        [[currency]]<span class="ng-binding">{{cart_array[0]['data-product-price'] * cart_array[0]['data-product-qty'] | number:2}}</span>
+                      </div>
+                    </div>
+                    <div class="row row--two">
+                      <div class="column">
+                        Shipping
+                      </div>
+                      <div class="column">
+                        [[currency]]<span class="ng-binding">{{cart_array[0]['data-shipping-price'] | number:2}}</span>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row row--two">
+                      <div class="column">
+                        <strong>Total:</strong>
+                      </div>
+                      <div class="column">
+                        [[currency]]<span data-product-total></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row--one">
+                    <div class="column">
+                      <div class="spotlight__terms">
+                        <h3>Terms of Offer</h3>
+                        <p ng-if="package === 'unselected'">
+                          Select a package to see the terms associated with your order.
+                        </p>
+                        <p ng-if="package === 'trial'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and the enrollment in our monthly auto-ship program, where you will immediately be billed the shipping and handling amount of [[currency]][[shipping_price]]. We will then immediately ship you your first trial bottle of [[funnel_name]]. After your trial period ends (in [[trial_period]] days approximately [[shipping_period]] days for shipping and [[evaluation_period]] days to try the product) your credit card will be automatically charged [[currency]][[product_rebill_price_1]] (free shipping). You will be charged the full retail price of [[currency]][[product_rebill_price_1]] (free shipping) for each recurring product that is shipped to you every 30 days hereafter until you cancel. If you cancel within the trial period you will not be charged the full rebill price. If our product is not right for you, simply call <a href="tel:[[funnel_support_phone]]">[[funnel_support_phone]]</a> or contact us via email at <a href="mailto:[[funnel_support_email]]">[[funnel_support_email]]</a> to cancel your membership and owe nothing more. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</p>
+                        <p ng-if="package === 'membership1'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and you will immediately be billed the amount of [[currency]][[crm_product_price_2]] (free shipping). We will then immediately ship you your package of [[funnel_name]]. This is a one-time purchase. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</p>
+                        <p ng-if="package === 'membership3'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and you will immediately be billed the amount of [[currency]][[crm_product_price_3]] (free shipping). We will then immediately ship you your package of [[funnel_name]]. This is a one-time purchase. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</p>
+                        <p ng-if="package === 'membership5'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and you will immediately be billed the amount of [[currency]][[crm_product_price_4]] (free shipping). We will then immediately ship you your package of [[funnel_name]]. This is a one-time purchase. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</p>
+                         <p ng-if="package === 'sample'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a>, where you will immediately be billed the amount of [[currency]][[crm_product_price_4]] (free shipping). We will then immediately ship you your sample bottle of [[funnel_name]]. Our Customer Service Department is open: 24/7. Charge will appear as "[[credit_card_descriptor]]".</p>
+						 
+                        <h3>Purchase Options</h3>
+						
+                        <p>[[product_name_1]]: Only pay [[currency]][[crm_product_price_1]] + [[currency]][[shipping_price]] S&H.</p>
+                        <p>[[product_name_2]]: Pay [[currency]][[crm_product_price_2]] (free shipping). This is a one-time purchase.</p>
+                        <p>[[product_name_3]]: Pay [[currency]][[crm_product_price_3]] (free shipping). This is a one-time purchase.</p>
+                        <p>[[product_name_4]]: Pay [[currency]][[crm_product_price_4]] (free shipping). This is a one-time purchase.</p>
+						<p>[[product_name_5]]: Pay [[currency]][[crm_product_price_5]] (free shipping) now. This is a one-time purchase.</p>
+						
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="panel">
+                    <div class="panel__header"><strong>Final Step</strong><br>Payment Information</div>
+                    <div class="panel__content">
+                      <form class="spotlight__form" name="CheckoutPageForm" ng-submit="CheckoutPageSubmitHandler($event)">
+                        <div>
+                          <label>Is your billing address the same as your shipping address?</label>
+                          <input type="radio" ng-checked="true" ng-model="CheckoutData.billingSameAsShipping" id="billingYes" name="billingSameAsShipping" value="yes" checked>
+                          <label for="billingYes"></label>&nbsp;<label for="billingYes">Yes</label>
+                          <input type="radio" ng-click="loadCountries();" ng-model="CheckoutData.billingSameAsShipping" id="billingNo" name="billingSameAsShipping" value="no">
+                          <label for="billingNo"></label>&nbsp;<label for="billingNo">No</label>
+                        </div>
+                        <div class="billing-info is--hidden">
+                          <label for="billingFirstName">First Name:</label>
+                          <input type="text" class="input-text" id="billingFirstName" name="billingFirstName" placeholder="First Name" ng-model="CheckoutData.billingFirstName">
+                          <br>
+                          <label for="billingLastName">Last Name:</label>
+                          <input type="text" class="input-text" id="billingLastName" name="billingLastName" placeholder="Last Name" ng-model="CheckoutData.billingLastName">
+                          <br>
+                          <label for="billingAddress1">Address:</label>
+                          <input type="text" class="input-text" id="billingAddress1" name="billingAddress1" placeholder="Address" ng-model="CheckoutData.billingAddress">
+                          <br>
+                          <label for="billingCity">City:</label>
+                          <input type="text" class="input-text" id="billingCity" name="billingCity" placeholder="City" ng-model="CheckoutData.billingCity">
+                          <br>
+                          <label for="billingCountry">Country:</label>
+                          <select class="input-text input-select" id="billingCountry" name="billingCountry" ng-change="getStates()" ng-model="CheckoutData.billingCountry" ng-options="countryData.country_code as countryData.country_name for countryData in countriesData" ng-init="CheckoutData.billingCountry='US';">
+                            <option selected value="">Select Country</option>
+                            <option value="223">United States</option>
+                          </select>
+                          <br>
+                          <label for="billingState">State:</label>
+                          <select class="input-text input-select" id="billingState" name="billingState" ng-model="CheckoutData.billingState" ng-options="stateData.state_code as stateData.state_name for stateData in statesData">
+                            <option selected value="">Select State</option>
+                          </select>
+                          <br>
+                          <label for="billingZip">ZIP:</label>
+                          <input type="text" class="input-text" id="billingZip" name="billingZip" placeholder="Zip Code" onkeyup="this.value = this.value.replace(/[^0-9\.-]/g, '')" maxlength="5" ng-model="CheckoutData.billingZip">
+                        </div>
+                        <div class="order-cards">
+                          <img src="images/cards.png">
+                        </div>
+                        <label for="cc_type">Card Type:</label>
+                        <select class="input-text input-select" id="cc_type" name="cc_type" autofocus required ng-model="CheckoutData.cc_type" ng-options="cardType.type as cardType.name for cardType in cardTypes">
+                          <option value="" selected>Select Card</option>
+                        </select>
+                        <br>
+                        <label for="cc_number">CC#:</label>
+                        <input type="text" class="required input-text" id="cc_number" name="cc_number" required data-error-message="Please enter a valid credit card number!" maxlength=16 ng-model="CheckoutData.cc_number">
+                        <br>
+                        <label for="cc_month">Exp Date:</label>
+                        <select class="input-text input-select input-cc" id="cc_year" name="cardYear" required data-error-message="Please select a valid expiry year!" ng-model="CheckoutData.expyear" ng-options="yearData.year_num as yearData.year_name for yearData in yearsData">
+                          <option value="">Year</option>
+                        </select>
+                        <select class="input-text input-select input-cc" id="cc_month" name="cardMonth" required data-error-message="Please select a valid expiry month!" ng-model="CheckoutData.expmonth" ng-options="monthData.month_num as monthData.month_name for monthData in monthsData">
+                          <option value="">Month</option>
+                        </select>
+                        <br>
+                        <label for="cc_ccv">CCV:</label>
+                        <input type="text" class="input-text" id="cc_ccv" name="cc_ccv" required data-validate="cvv" maxlength="3" data-error-message="Please enter a valid CVV code!" ng-model="CheckoutData.cvv">
+                        <br>
+                        <input type="hidden" id="unselected">
+                        <input type="checkbox" id="billingAgreeCheckbox" name="billingAgreeCheckbox" required ng-model="CheckoutData.billingAgreeCheckbox">
+                        <label for="billingAgreeCheckbox"></label>
+                        <label for="unselected" ng-if="package === 'unselected'">Select a package to see the terms associated with your order.</label>
+                        <label for="billingAgreeCheckbox" ng-if="package === 'trial'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and the enrollment in our monthly auto-ship program, where you will immediately be billed the shipping and handling amount of [[currency]][[shipping_price]]. We will then immediately ship you your first trial bottle of [[funnel_name]]. After your trial period ends (in [[trial_period]] days approximately [[shipping_period]] days for shipping and [[evaluation_period]] days to try the product) your credit card will be automatically charged [[currency]][[product_rebill_price_1]] (free shipping). You will be charged the full retail price of [[currency]][[product_rebill_price_1]] (free shipping) for each recurring product that is shipped to you every 30 days hereafter until you cancel. If you cancel within the trial period you will not be charged the full rebill price. If our product is not right for you, simply call <a href="tel:[[funnel_support_phone]]">[[funnel_support_phone]]</a> or contact us via email at <a href="mailto:[[funnel_support_email]]">[[funnel_support_email]]</a> to cancel your membership and owe nothing more. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</label>
+                        <label for="billingAgreeCheckbox" ng-if="package === 'membership1'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and you will immediately be billed the amount of [[currency]][[crm_product_price_2]] (free shipping). We will then immediately ship you your package of [[funnel_name]]. This is a one-time purchase. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</label>
+                        <label for="billingAgreeCheckbox" ng-if="package === 'membership3'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and you will immediately be billed the amount of [[currency]][[crm_product_price_3]] (free shipping). We will then immediately ship you your package of [[funnel_name]]. This is a one-time purchase. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]".</label>
+                        <label for="billingAgreeCheckbox" ng-if="package === 'membership5'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a> and you will immediately be billed the amount of [[currency]][[crm_product_price_4]] (free shipping). We will then immediately ship you your package of [[funnel_name]]. This is a one-time purchase. Our Customer Service Department is open: 24/7. Charges will appear as "[[credit_card_descriptor]]"</label>
+                                                <label for="billingAgreeCheckbox" ng-if="package === 'sample'">By placing an order with us, you agree to our full <a href="terms" data-open-popup="true">Terms & Conditions</a> and <a href="privacy" data-open-popup="true">Privacy Policy</a>, where you will immediately be billed the amount of [[currency]][[crm_product_price_4]] (free shipping). We will then immediately ship you your sample bottle of [[funnel_name]]. Our Customer Service Department is open: 24/7. Charge will appear as "[[credit_card_descriptor]]".</label>
+                        <button class="button" id="form_button" name="submit" ng-disabled="processing">Order Now</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>

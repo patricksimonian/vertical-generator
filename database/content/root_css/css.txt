@@ -1,0 +1,118 @@
+
+     :root {
+        --primary-color: <%=primary_color%>;
+        --primary-dark-color: <%=primary_dark_color%>;
+        --primary-light-color: <%=primary_light_color%>;
+        --secondary-color: <%=secondary_color%>;
+        --secondary-dark-color: <%=secondary_dark_color%>;
+        --secondary-light-color: <%=secondary__lightcolor%>;
+        --tertiary-color: <%=tertiary%>;
+        --tertiary-dark-color: <%=tertiary_dark_color%>;
+        --tertiary-light-color: <%=tertiary_light_color%>;
+        --quarternary-color: <%=compliment_color%>;
+        --quarternary-dark-color: <%=compliment_dark_color%>;
+        --quarternary-light-color: <%=compliment_light_color%>;
+
+        --primary-design-primary-alpha-color: <%=primary_primary_color_alpha%>;
+        --primary-design-secondary-alpha-color: <%=primary_secondary_color_alpha%>;
+        --primary-design-tertiary-alpha-color: <%=primary_tertiary_color_alpha%>;
+        --primary-design-quarternary-alpha-color: <%=primary_compliment_color_alpha%>;
+        --primary-design-quinary-alpha-color: <%=primary_quinary_color_alpha%>;
+        --primary-design-senary-alpha-color: <%=primary_senary_color_alpha%>;
+
+        --primary-design-primary-color: var(--tertiary-color);
+        --primary-design-secondary-color: var(--quarternary-color);
+
+        --secondary-design-primary-alpha-color: <%=secondary_primary_color_alpha%>;
+        --secondary-design-secondary-alpha-color: <%=secondary_secondary_color_alpha%>;
+        --secondary-design-tertiary-alpha-color: <%=secondary_tertiary_color_alpha%>;
+        --secondary-design-quarternary-alpha-color: <%=secondary_compliment_color_alpha%>;
+        --secondary-design-quinary-alpha-color: <%=secondary_quinary_color_alpha%>;
+        --secondary-design-senary-alpha-color: <%=secondary_senary_color_alpha%>;
+
+        --secondary-design-primary-color: var(--tertiary-color);
+        --secondary-design-secondary-color: var(--quarternary-color);
+
+        --design-primary-offset-alpha-color: <%=design_primary_offset_color_alpha%>;
+        --design-secondary-offset-alpha-color: <%=design_secondary_offset_color_alpha%>;
+        --design-tertiary-offset-alpha-color: <%=design_tertiary_offset_color_alpha%>;
+
+        --design-primary-offset-color: <%=design_primary_offset_color%>;
+        --design-secondary-offset-color: <%=design_secondary_offset_color%>;
+        --design-tertiary-offset-color: <%=design_tertiary_offset_color%>;
+        --primary-gradient-color: var(--primary-color);
+        --secondary-gradient-color: var(--secondary-color);
+        --tertiary-gradient-color: var(--tertiary-color);
+        --quarternary-gradient-color: var(--quarternary-color);
+        --primary-design-position-top: 82px !important;
+        --primary-design-skew: 18deg;
+        --primary-design-skew-inner: 5deg;
+        --secondary-design-position-top: 866px !important;
+        --secondary-design-skew: 4deg;
+        --secondary-design-skew-inner: 7deg;
+        --primary-border-radius: 13px;
+        --secondary-border-radius: 8px;
+        --tertiary-border-radius: 0px;
+        --quarternary-border-radius: 4px;
+        --container-width: 991px;
+        --primary-text-color: <%=primary_text_color%>;
+        --tertiary-text-color: <%=tertiary_text_color%>;
+
+        --link-normal-color: <%=link_normal_color%>;
+        --link-hover-color: <%=link_hover_color%>;
+        --link-active-color: <%=link_active_color%>;
+
+        --alt-link-normal-color: <%=alt_link_normal_color%> ;
+        --alt-link-hover-color: <%=alt_link_hover_color%> ;
+        --alt-link-active-color: <%=alt_link_active_color%> ;
+
+        --radial-gradient-inner-color: <%=radial_gradient_inner%>;
+        --radial-gradient-outer-color: <%=radial_gradient_outer%>;
+    }
+
+    .primary-design .design,
+    .secondary-design .design {
+        background-color: #aaa;
+    }
+
+    body {
+        background-color: var(--design-tertiary-offset-color);
+        background-blend-mode: soft-light;
+    }
+
+    h2,
+    header.header,
+    footer.footer,
+    .panel__content:first-child,
+    .spotlight__terms a:link,
+    .spotlight__terms a:visited,
+    footer.footer a:link,
+    footer.footer a:visited {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    body:not(.inner) .spotlight,
+    body:not(.inner) .cta {
+        background-blend-mode: screen;
+    }
+
+    body {
+        background-image: url('images/bg.png');
+        background-blend-mode: unset;
+    }
+
+    body:not(.inner) .spotlight {
+        background-image: url('images/spotlight-bg.png');
+        background-blend-mode: unset;
+    }
+
+    body:not(.inner) .cta {
+        background-image: url('images/cta-bg.png');
+        background-blend-mode: unset;
+    }
+
+    body,
+    body:not(.inner) .spotlight,
+    body:not(.inner) .cta {
+        background-blend-mode: unset !important;
+    }

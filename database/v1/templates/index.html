@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ElminaraApp" ng-controller="LandingPageCtrl">
+
+<head>
+    [[mandatory_control | raw]]
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[[funnel_name]]</title>
+    [[core_app_css_links | raw]]
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/two-tone.css">
+    <link rel="stylesheet" href="css/root.css">
+</head>
+
+<body>
+    <div class="primary-design">
+        <div class="design">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="panel header">
+                <div class="panel__content">
+                    <h1>[[funnel_name]]</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <%=main_content%>
+    <div class="secondary-design">
+        <div class="design">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="panel footer">
+                <div class="panel__content">
+                    <div class="row row--one">
+                        <div class="column">
+                            <a href="terms" data-open-popup="true">TERMS</a> |
+                            <a href="privacy" data-open-popup="true">PRIVACY POLICY</a> |
+                            <a href="contact" data-open-popup="true">CONTACT US</a> |
+                            <a href="ingredients" data-open-popup="true">INGREDIENTS</a>
+                        </div>
+                    </div>
+                    <div class="row row--one">
+                        <div class="column">
+                            <span>Copyright &copy; [[current_year]] [[owner_corp_name]]. All Rights Reserved</span>
+                        </div>
+                    </div>
+                    <div class="row row--one">
+                        <div class="column">
+                            <address>[[owner_corp_name]]
+                                <br>
+                                <br>Address: [[address_formatted | raw]]
+                                <br>
+                                <br>Phone Number: <a href="tel:[[funnel_support_phone]]">[[funnel_support_phone]]</a>
+                                <br>
+                                <br>Email: <a href="mailto:[[funnel_support_email]]">[[funnel_support_email]]</a></address>
+                        </div>
+                    </div>
+                    <div class="row row--one">
+                        <div class="column">
+                            <p>This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the label. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Individual results will vary. By using this site you agree to follow the Privacy Policy and all Terms & Conditions printed on this site. Void Where Prohibited By Law.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    [[core_app_js_links | raw]]
+    <script src="js/main.js"></script>
+</body>
+
+</html>

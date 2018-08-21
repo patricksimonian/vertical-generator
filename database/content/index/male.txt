@@ -1,0 +1,107 @@
+   <main class="main-content">
+        <div class="container">
+            <div class="panel spotlight">
+                <div class="panel__content">
+                    <div class="row row--three row--alt">
+                        <div class="column">
+                            <div class="panel">
+                                <div class="panel__header">Tell us where to send
+                                    <br><span>your Package</span></div>
+                                <div class="panel__content">
+                                    <form class="spotlight__form" name="landingPageForm" ng-submit="landingPageSubmitHandler($event)">
+                                        <label for="shippingFirstName">First Name:</label>
+                                        <input type="text" class="required input-text" id="shippingFirstName" name="shippingFirstName" autofocus required placeholder="First Name" data-error-message="Please enter your first name!" ng-model="FormData.firstName">
+                                        <br>
+                                        <label for="shippingLastName">Last Name:</label>
+                                        <input type="text" class="required input-text" id="shippingLastName" name="shippingLastName" required placeholder="Last Name" data-error-message="Please enter your last name!" ng-model="FormData.lastName">
+                                        <br>
+                                        <label for="shippingAddress1">Address:</label>
+                                        <input type="text" class="required input-text" id="shippingAddress1" name="shippingAddress1" required placeholder="Address" data-error-message="Please enter your address!" ng-model="FormData.address">
+                                        <br>
+                                        <label for="shippingCity">City:</label>
+                                        <input type="text" class="required input-text" id="shippingCity" name="shippingCity" required placeholder="City" data-error-message="Please enter your city!" ng-model="FormData.city">
+                                        <br>
+                                        <label for="shippingCountry">Country:</label>
+                                        <select class="input-text input-select" id="shippingCountry" name="shippingCountry" required ng-change="getStates()" ng-model="FormData.country" ng-options="countryData.country_code as countryData.country_name for countryData in countriesData">
+                                            <option value="" selected>Select Country</option>
+                                        </select>
+                                        <br>
+                                        <label for="shippingState">State:</label>
+                                        <select class="input-text input-select" id="shippingState" name="shippingState" required ng-model="FormData.state" ng-options="stateData.state_code as stateData.state_name for stateData in statesData">
+                                            <option selected value="">Select State</option>
+                                        </select>
+                                        <br>
+                                        <label for="shippingZip">ZIP:</label>
+                                        <input type="text" class="required input-text" id="shippingZip" name="shippingZip" required placeholder="Zip Code" onkeyup="this.value = this.value.replace(/[^0-9\.-]/g, '')" maxlength="5" data-min-length="5" data-error-message="Please enter a valid zip code!" ng-model="FormData.zip">
+                                        <br>
+                                        <label for="shippingPhoneNumber">Phone:</label>
+                                        <input type="text" class="required input-text" id="shippingPhoneNumber" name="shippingPhoneNumber" required placeholder="Phone" onkeyup="this.value = this.value.replace(/[^0-9\.-]/g, '')" data-validate="phone" data-min-length="10" maxlength="11" data-max-length="15" data-error-message="Please enter a valid contact number!" ng-model="FormData.phone">
+                                        <br>
+                                        <label for="shippingEmailAddress">Email:</label>
+                                        <input type="text" class="required input-text" id="shippingEmailAddress" name="shippingEmailAddress" required placeholder="Email Address" ng-model="FormData.email">
+                                        <br>
+                                        <button class="button" name="submit">Order Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="spotlight__product">
+                                <div class="product__picture"></div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="spotlight__logo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel cta">
+            <div class="panel__content">
+                <div class="row row--three">
+                    <div class="column">
+                        <div class="cta__info">
+                            <ul>
+                                <li><span class="accent-color">May Help</span> Improve Energy Level</li>
+                                <li><span class="accent-color">May Help</span> Amplify Load Capacity</li>
+                                <li><span class="accent-color">May Help</span> Reinforce Sex Drive</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="cta__model"></div>
+                    </div>
+                    <div class="column">
+                        <div class="cta__product">
+                            <div class="product__picture"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel feature">
+            <div class="panel__content">
+                <div class="row row--three">
+                    <div class="column">
+                        <div class="icons row">
+                            <div class="column">
+                                <div class="icon fa fa-diamond"></div>
+                                <h3>Happiness</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="feature__logo"></div>
+                    </div>
+                    <div class="column">
+                        <div class="feature__info">
+                            <h2>What Is [[funnel_name]]?</h2>
+                            <p>The contributing factors of failing health includes stress, over-fatigue, and aging. When a man reaches his golden years, his body may naturally decline to everything &#8211; libido, stamina, power, and strength. When this starts to dysfunction, his daily activities are affected.</p>
+                            <p>You don't have to worry anymore because of [[funnel_name]]. a dietary supplement may help you not just to revitalize your body but also improve your performance. Your age may not matter anymore. As long as you maintain a healthy and active lifestyle, along with this supplement, rest assured that you may do anything.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

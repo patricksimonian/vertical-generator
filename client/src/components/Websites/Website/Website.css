@@ -1,0 +1,18 @@
+.Website {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 0 2px 2px #ccc;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.Website h1 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 500px) {
+    .Website {
+        width: 250px;
+    }
+}
