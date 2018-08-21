@@ -29,6 +29,21 @@
 .Website .Delete:hover {
     background-color: #db262b;
 }
+
+.Website .PaletteToggle {
+    position: absolute;
+    color: #fff;
+    padding: 5px 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #1371d9;
+    font-size: 16px;
+    font-weight: 600;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 @media screen and (min-width: 500px) {
     .Website {
         width: 250px;

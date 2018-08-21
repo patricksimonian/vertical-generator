@@ -124,6 +124,19 @@ const clearWebsites = state => {
     return updateObject(state, {loading: false, websites: []});
 }
 
+const changeWebsitePalette = (state, id, paletteId) => {
+    //find website by id and change palette
+
+    const websites = state.websites.map(ws => {
+        if(ws.id === id) {
+            ws.palette = paletteId;
+        }
+        return ws;
+    });
+
+    return updateObject(state, {websites});
+}
+
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case actionTypes.DECREMENT_VERTICAL: return decrementVertical(state, action.payload.vertical, action.payload.count); 
@@ -144,6 +157,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.FETCH_COLOR_PALETTES_SUCCESS: return setColorPalettes(state, action.payload.palettes);
         case actionTypes.DOWNLOAD_WEBSITES_START: return setLoading(state);
         case actionTypes.DOWNLOAD_WEBSITES_SUCCESS: return clearWebsites(state);
+        case actionTypes.CHANGE_WEBSITE_PALETTE: return changeWebsitePalette(state, action.payload.id, action.payload.paletteId);
         default: return initialState;
     }
 }

@@ -128,6 +128,15 @@ export const downloadWebsitesFailed = () => {
     }
 }
 
+export const changeWebsitePalette = (id, paletteId) => {
+    return {
+        type: actionTypes.CHANGE_WEBSITE_PALETTE,
+        payload: {
+            id,
+            paletteId
+        }
+    }
+}
 // async
 export const onGenerateWebsites = () => {
     return (dispatch) => {

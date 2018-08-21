@@ -20,6 +20,9 @@ const Websites = (props) => {
                 onDeleteHandler={() => {
                     props.removeWebsite(ws.id);
                 }}
+                onPaletteChangedHandler={(paletteId) => {
+                    props.changePaletteForWebsite(ws.id, paletteId);
+                }}
                 checkoutChanged={(checkout) => {
                     console.log(props);
                     props.websiteCheckoutChanged(ws.id, checkout);
@@ -50,7 +53,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         websiteCheckoutChanged: (id, checkout) => dispatch(actions.changeWebsiteCheckout(id, checkout)),
-        removeWebsite: (id) => dispatch(actions.deleteWebsite(id))
+        removeWebsite: (id) => dispatch(actions.deleteWebsite(id)),
+        changePaletteForWebsite: (id, paletteId) => dispatch(actions.changeWebsitePalette(id, paletteId))
     }
 }
 
