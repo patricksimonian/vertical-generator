@@ -8,7 +8,7 @@ import Verticals from './Verticals/Verticals';
 import Checkouts from './Checkouts/Checkouts';
 
 import Button from '../UI/Button/Button';
-
+import withLoader from '../../hoc/withLoader/withLoader';
 import {connect} from 'react-redux';
 
 const Controls = (props) => (
@@ -44,7 +44,8 @@ const mapStateToProps = state => {
             hair: state.controls.verticals.hair
         },
         defaultCheckout: state.controls.defaultCheckout,
-        websites: state.websites
+        websites: state.websites,
+        loading: state.random.palettesLoading
     }
 }
 
@@ -60,4 +61,4 @@ const mapDispatchToProps = dispatch => ({
     downloadWebsites: (websites) => dispatch(actions.downloadWebsites(websites))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Controls);
+export default connect(mapStateToProps, mapDispatchToProps)(withLoader(Controls, classes.Controls));

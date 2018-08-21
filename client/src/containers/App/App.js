@@ -5,13 +5,13 @@ import Controls from '../../components/Controls/Controls';
 import Websites from '../../components/Websites/Websites';
 import * as actions from '../../store/actions/actions';
 import {connect} from 'react-redux';
+import withLoader from '../../hoc/withLoader/withLoader';
 
 class App extends Component {
   componentDidMount() {
     //fetch color palettes
     this.props.fetchPalettes();
   }
-
 
   render() {
     return (
@@ -25,7 +25,8 @@ class App extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    palettes: state.palettes
+    palettes: state.palettes,
+    loading: state.loading
   }
 }
 
@@ -34,4 +35,5 @@ const mapDispatchToProps = (dispatch) => {
     fetchPalettes: () => dispatch(actions.fetchColorPalettes())
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default connect(mapStateToProps, mapDispatchToProps)(withLoader(App, null, 'Downloading To Local...'));

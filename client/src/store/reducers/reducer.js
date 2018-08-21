@@ -19,6 +19,9 @@ const initialState = {
         ['T135SSC', 'trial+1+3+5_supply_+_sample_checkout'],
         ['T135SC', 'trial+1+3+5_supply_checkout']
     ],
+    random: {
+        palettesLoading: false
+    },
     palettes: [],
     websites: [],
     loading: false,
@@ -112,7 +115,7 @@ const changeCheckoutForWebsite = (state, id, checkout) => {
 }
 
 const setColorPalettes = (state, palettes) => {
-    return updateObject(state, {palettes});
+    return updateObject(state, {palettes, random: {loading: false}});
 }
 
 const setLoading = state => updateObject(state, {loading: true});
@@ -133,6 +136,11 @@ const reducer = (state = initialState, action) => {
         case actionTypes.GENERATE_WEBSITES: return generateWebsites(state);
         case actionTypes.DELETE_WEBSITE: return deleteWebsite(state, action.payload.id);
         case actionTypes.CHANGE_WEBSITE_CHECKOUT: return changeCheckoutForWebsite(state, action.payload.id, action.payload.checkout);
+        case actionTypes.FETCH_COLOR_PALETTES_START: 
+            const random = {
+                palettesLoading: true
+            }
+            return updateObject(state, {random});
         case actionTypes.FETCH_COLOR_PALETTES_SUCCESS: return setColorPalettes(state, action.payload.palettes);
         case actionTypes.DOWNLOAD_WEBSITES_START: return setLoading(state);
         case actionTypes.DOWNLOAD_WEBSITES_SUCCESS: return clearWebsites(state);

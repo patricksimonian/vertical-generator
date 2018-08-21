@@ -5,7 +5,8 @@
     border: 1px solid #ccc;
     box-shadow: 0 0 2px 2px #ccc;
     overflow-y: auto;
-    bottom: 0;  
+    bottom: 0;
+    width: 300px;
 }
 .Controls .Tools {
     display: flex;
