@@ -78,7 +78,13 @@ export const changeWebsiteCheckout = (id, checkout) => {
         }
     }
 }
- 
+
+export const deleteWebsites = () => {
+    return {
+        type: actionTypes.DELETE_WEBSITES
+    }
+}
+
 export const deleteWebsite = (id) => {
     return {
         type: actionTypes.DELETE_WEBSITE,

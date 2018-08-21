@@ -27,11 +27,9 @@ const Websites = (props) => {
                     console.log(props);
                     props.websiteCheckoutChanged(ws.id, checkout);
                 }}/>
-        )
+        );
 
-
-    }
-    );
+    });
     return (
         <div className={classes.Websites}>
             {websites}

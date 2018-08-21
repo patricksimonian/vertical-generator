@@ -158,6 +158,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.DOWNLOAD_WEBSITES_START: return setLoading(state);
         case actionTypes.DOWNLOAD_WEBSITES_SUCCESS: return clearWebsites(state);
         case actionTypes.CHANGE_WEBSITE_PALETTE: return changeWebsitePalette(state, action.payload.id, action.payload.paletteId);
+        case actionTypes.DELETE_WEBSITES: return clearWebsites(state);
         default: return initialState;
     }
 }

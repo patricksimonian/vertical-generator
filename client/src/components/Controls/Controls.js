@@ -15,12 +15,14 @@ const Controls = (props) => (
     <div className={classes.Controls}>
         <div className={classes.Tools}>
             <Button buttonType="Neutral" clicked={props.onResetCounts}>Reset</Button>
+            <Button buttonType="Danger" clicked={props.deleteWebsites}>Clear Sites</Button>
         </div>
         <div className={classes.Tools}>
-            <Button clicked={() => {props.incrementVerticals(5)}}buttonType="Success">5</Button>
+            <Button buttonType="Success" clicked={props.generateWebsites}>Preview!</Button>
             <Button clicked={() => {props.incrementVerticals(1)}}buttonType="Success">1</Button>
-            <Button clicked={() => {props.decrementVerticals(5)}}buttonType="Danger">5</Button>
+            <Button clicked={() => {props.incrementVerticals(5)}}buttonType="Success">5</Button>
             <Button clicked={() => {props.decrementVerticals(1)}}buttonType="Danger">1</Button>
+            <Button clicked={() => {props.decrementVerticals(5)}}buttonType="Danger">5</Button>
         </div>
         <Verticals
             verticals={props.verticals}
@@ -58,7 +60,8 @@ const mapDispatchToProps = dispatch => ({
     onResetCounts: () => dispatch(actions.resetControl()),
     onCheckoutChangedHandler: (checkout) => dispatch(actions.setDefaultCheckout(checkout)),
     generateWebsites: () => dispatch(actions.onGenerateWebsites()),
-    downloadWebsites: (websites) => dispatch(actions.downloadWebsites(websites))
+    downloadWebsites: (websites) => dispatch(actions.downloadWebsites(websites)),
+    deleteWebsites: () => dispatch(actions.deleteWebsites())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(withLoader(Controls, classes.Controls));

@@ -18,7 +18,7 @@ class PalettePicker extends React.Component {
             secondary: {...p.secondary},
             tertiary: {...p.tertiary},
             compliment: {...p.compliment}
-        }));
+        })).filter(p2 => p2.id !== this.props.selectedPalette);
 
         this.setState({palettes, filteredPalettes: palettes});
     }
@@ -38,7 +38,7 @@ class PalettePicker extends React.Component {
     
     render() {
         const palettes = this.state.filteredPalettes.map(p => (
-            <li className={p.id === this.props.selectedPalette ? classes.Active : ''} onClick={() => this.props.paletteChanged(p.id)} 
+            <li onClick={() => this.props.paletteChanged(p.id)} 
                 key={p.id}>
                 <Palette  colors={p.colors} name={p.name}/>
             </li>
