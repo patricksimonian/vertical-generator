@@ -20,7 +20,8 @@ class Website extends React.Component  {
         });
     }
 
-    togglePalettePicker = () => {
+    togglePalettePicker = (e) => {
+        e.stopPropagation();
         this.setState({viewingPalettePicker: !this.state.viewingPalettePicker});
     }
 
@@ -34,7 +35,7 @@ class Website extends React.Component  {
                 <h1>{this.props.title}</h1>
                 {palettePicker}
                 <button onClick={this.props.onDeleteHandler} className={classes.Delete}>X</button>
-                <button onClick={this.togglePalettePicker} className={classes.PaletteToggle}>palettes</button>
+                <button onClick={this.togglePalettePicker} className={classes.PaletteToggle}>{this.state.viewingPalettePicker ? 'close' : 'palettes'}</button>
                 <Palette colors={this.props.palette.colors} name={this.props.palette.name} />
                 <Checkouts 
                     selectedCheckout={this.props.selectedCheckout} 
