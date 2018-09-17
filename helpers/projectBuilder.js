@@ -2,7 +2,7 @@
 const Promise = require('bluebird');
 const paletteHelper = require('../helpers/palettes');
 const schemas = require('../database/schema.json');
-const funnelsData = require('../database/storage/funnel.json');
+const funnelsData = require('../database/v1/storage/funnel.json');
 const Vertical = require('./Vertical');
 // checkout types and there related txt files
 const checkouts = {
@@ -66,7 +66,7 @@ class ProjectBuilder {
       if(this.options.garunteedUnique) {
         vertical.project_name += Date.now().toString().slice(8);
       }
-      return new Vertical(vertical, this.options.schema, checkouts[vertical.package]);
+      return new Vertical(vertical, this.options.schema, checkouts[vertical.package], this.options.globals);
     });
   }
 
@@ -80,8 +80,8 @@ class ProjectBuilder {
       errors.error = true;
     }
     for(let key in globals) {
-      if(!funnels[key] || globals[key].length === 0) {
-        errors.push('Global Funnel Setting ' + key + 'doesn\'t exist or was left blank');
+      if(!funnelsData[key] || globals[key].length === 0) {
+        errors.errors.push('Global Funnel Setting ' + key + 'doesn\'t exist or was left blank');
       }
     }
     errors.error = errors.errors.length > 0;

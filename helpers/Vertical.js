@@ -5,11 +5,27 @@ const Promise = require('bluebird');
 const ncp = Promise.promisify(require('ncp').ncp); //copy directory module
 
 class Vertical {
-  constructor(data, schema, checkout) {
+  constructor(data, schema, checkout, globals) {
     this.data = data;
     this.schema = schema;
     this.checkout = checkout;
+    this.globals = globals;
     return this.init();
+  }
+
+  buildFunnelJSONFromGlobals(destinationPath, globals) {
+    return fileHelper.readContentsOfFile(destinationPath)
+    .then((content) => {
+      console.log('updating funnel.json with global settings');
+      content = JSON.parse(content);
+      content.funnel_support_email = globals.funnel_support_email;
+      content.funnel_support_phone = globals.funnel_support_phone;
+      content.address_inline = globals.address_inline; 
+      content.address_formatted = globals.address_inline;
+      content.signer_corp_name = globals.signer_corp_name;
+      content.state_of_incorporation = globals.state_of_incorporation;
+      return fileHelper.writeFile(destinationPath, JSON.stringify(content, null, 2));
+    });
   }
 
   init() {
@@ -39,6 +55,10 @@ class Vertical {
           terms,
           rootCSS
         }, that.checkout);
+      })
+      .spread((destinationPath) => {
+        const funnelsJSONPath = path.join(destinationPath, '/storage/funnel.json');
+        return that.buildFunnelJSONFromGlobals(funnelsJSONPath, that.globals);
       });
   }
 
@@ -75,11 +95,12 @@ class Vertical {
     const termsPath = path.join(destinationPath, '/templates/terms.html');
     const rootCSSPath = path.join(destinationPath, '/css/root.css');
     return Promise.all([
+      destinationPath,
       fileHelper.writeFile(ingredientsPath, content.ingredients),//create ingredient
       fileHelper.writeFile(termsPath, content.terms),//create terms
       fileHelper.writeContentsToFileByTag(indexPath, content.mainContent, '<%=main_content%>'), //replace main content
       fileHelper.writeContentsToFileByTag(checkoutPath, content.checkout, '<%=main_content%>'), //replace main content
-      fileHelper.writeFile(rootCSSPath, content.rootCSS)//root css
+      fileHelper.writeFile(rootCSSPath, content.rootCSS),//root css
     ]);
   }
 

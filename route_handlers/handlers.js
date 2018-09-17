@@ -29,7 +29,8 @@ module.exports = {
       // create project builder
       const pb = new ProjectBuilder(req.body.payload, {
         schema: req.params.version,
-        garunteedUnique: true
+        garunteedUnique: true,
+        globals: req.body.globals
       });
       // start building
       pb.build()

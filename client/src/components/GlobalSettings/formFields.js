@@ -4,5 +4,5 @@ export default  {
     address_inline: {label: 'Address', value: '',},
     address_return: { label: 'Return Address', value: '',},
     signer_corp_name: { label: 'Corp Name', value: '',},
-    state_of_incorporatio: { label: 'State', value: '',},
+    state_of_incorporation: { label: 'State', value: '',},
 }
