@@ -1,7 +1,6 @@
 .eslintrc
 node_modules
 /temp/*
-database/schema.json
 .env
 
 # See https://help.github.com/ignore-files/ for more about ignoring files.
