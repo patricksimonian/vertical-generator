@@ -14,10 +14,17 @@ module.exports = {
     console.log('received request');
     let destinationPath = "";
     let error = ProjectBuilder.verifyVerticals(req.body.payload);
+    //verify globals
+    let globalsError = ProjectBuilder.verifyGlobals(req.body.globals);
+    console.log(error);
+    console.log(globalsError);
+    error.errors = error.errors.concat(globalsError.errors);
+    error.error = error.errors.length > 0;
+    console.log(error);
     // minor verifications
     if(!routeVersions[req.params.version] || error.error) {
       console.log('received request', JSON.stringify(error));
-      res.json(error || "incorrect version").status(400);
+      res.status(400).json(error || "incorrect version");
     } else {
       // create project builder
       const pb = new ProjectBuilder(req.body.payload, {

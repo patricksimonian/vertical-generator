@@ -143,6 +143,17 @@ export const changeWebsitePalette = (id, paletteId) => {
         }
     }
 }
+
+//global form settings
+export const changeGlobalSetting = (property, value) => {
+    return {
+        type: actionTypes.CHANGE_GLOBAL_SETTING,
+        payload: {
+            property,
+            value
+        }
+    }
+}
 // async
 export const onGenerateWebsites = () => {
     return (dispatch) => {
@@ -164,7 +175,7 @@ export const fetchColorPalettes = () => {
     }
 }
 
-export const downloadWebsites = (websites) => {
+export const downloadWebsites = (websites, globals) => {
     return (dispatch) => {
         dispatch(downloadWebsitesStart());
         const payload = websites.map(ws => {
@@ -178,7 +189,8 @@ export const downloadWebsites = (websites) => {
             }
         })
         axios.post('/v1/verticals', {
-            payload
+            payload,
+            globals
         })
         .then(res => {
             dispatch(downloadWebsitesSuccess());

@@ -1,0 +1,20 @@
+{
+  "v1": {
+    "project": {
+      "css": {
+
+      },
+      "images": {
+
+      },
+      "js": {
+
+      },
+      "templates": {
+
+      },
+      "custom_htacess": "file",
+      "routes": "file"
+    }
+  }
+}

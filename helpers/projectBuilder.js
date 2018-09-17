@@ -2,6 +2,7 @@
 const Promise = require('bluebird');
 const paletteHelper = require('../helpers/palettes');
 const schemas = require('../database/schema.json');
+const funnelsData = require('../database/storage/funnel.json');
 const Vertical = require('./Vertical');
 // checkout types and there related txt files
 const checkouts = {
@@ -69,6 +70,23 @@ class ProjectBuilder {
     });
   }
 
+  static verifyGlobals(globals) {
+    let errors = {
+      errors: [],
+      error: false
+    };
+    if(Object.keys(globals).length < 6) {
+      errors.errors = ['Global Settings incomplete'];
+      errors.error = true;
+    }
+    for(let key in globals) {
+      if(!funnels[key] || globals[key].length === 0) {
+        errors.push('Global Funnel Setting ' + key + 'doesn\'t exist or was left blank');
+      }
+    }
+    errors.error = errors.errors.length > 0;
+    return errors;
+  }
 
   static verifyVerticals(verticalsData) {
     if(!(verticalsData instanceof Array)) {

@@ -3,6 +3,7 @@ import classes from './App.css';
 // components
 import Controls from '../../components/Controls/Controls';
 import Websites from '../../components/Websites/Websites';
+import GlobalSettings from '../../components/GlobalSettings/GlobalSettings';
 import * as actions from '../../store/actions/actions';
 import {connect} from 'react-redux';
 import withLoader from '../../hoc/withLoader/withLoader';
@@ -18,6 +19,7 @@ class App extends Component {
       <div className={classes.App}>
         <Controls />
         <Websites />
+        <GlobalSettings />
       </div>
     );
   }

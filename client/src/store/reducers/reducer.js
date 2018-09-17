@@ -22,12 +22,20 @@ const initialState = {
     random: {
         palettesLoading: false
     },
+    globals: {
+
+    },
     palettes: [],
     websites: [],
     loading: false,
     error: false
 };
 
+const setGlobals = (state, property, value) => {
+    const globals = {...state.globals}
+    globals[property] = value;
+    return updateObject(state, {globals});
+}
 
 const decrementVertical = (state, vertical, count) => {
     const controls = {...state.controls, verticals: {...state.controls.verticals}};
@@ -159,6 +167,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.DOWNLOAD_WEBSITES_SUCCESS: return clearWebsites(state);
         case actionTypes.CHANGE_WEBSITE_PALETTE: return changeWebsitePalette(state, action.payload.id, action.payload.paletteId);
         case actionTypes.DELETE_WEBSITES: return clearWebsites(state);
+        case actionTypes.CHANGE_GLOBAL_SETTING: return setGlobals(state, action.payload.property, action.payload.value);
         default: return initialState;
     }
 }

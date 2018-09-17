@@ -32,7 +32,7 @@ const Controls = (props) => (
         <p>Default Checkout</p>
         <Checkouts selectedCheckout={props.defaultCheckout} onCheckoutChangedHandler={props.onCheckoutChangedHandler} />
         <Button buttonType="Success" clicked={props.generateWebsites}>Preview!</Button>
-        <Button buttonType="Success" clicked={() => props.downloadWebsites(props.websites)} enabled={props.websites.length > 0}>Download!</Button>
+        <Button buttonType="Success" clicked={() => props.downloadWebsites(props.websites, props.globals)} enabled={props.websites.length > 0}>Download!</Button>
     </div>
 )
 
@@ -47,7 +47,8 @@ const mapStateToProps = state => {
         },
         defaultCheckout: state.controls.defaultCheckout,
         websites: state.websites,
-        loading: state.random.palettesLoading
+        loading: state.random.palettesLoading,
+        globals: state.globals,
     }
 }
 
@@ -60,7 +61,7 @@ const mapDispatchToProps = dispatch => ({
     onResetCounts: () => dispatch(actions.resetControl()),
     onCheckoutChangedHandler: (checkout) => dispatch(actions.setDefaultCheckout(checkout)),
     generateWebsites: () => dispatch(actions.onGenerateWebsites()),
-    downloadWebsites: (websites) => dispatch(actions.downloadWebsites(websites)),
+    downloadWebsites: (websites, globals) => dispatch(actions.downloadWebsites(websites, globals)),
     deleteWebsites: () => dispatch(actions.deleteWebsites())
 });
 

@@ -1,0 +1,33 @@
+{
+	"error_messages": {
+		"firstName": "Please enter your first name!",
+		"lastName": "Please enter your last name!",
+		"address": "Please enter your address!",
+		"city": "Please enter your city!",
+		"country": "Please select your country!",
+		"state": "Please select your state!",
+		"zip": "Please enter your zip code!",
+		"phone": "Please enter your contact number!",
+		"email": "Please enter your email address!",
+		"confirmEmail": "The confirmation email must match your email address!",
+		"agreeCheckbox": "Please confirm and agree the terms and conditions!",
+		"billingFirstName": "Please enter your billing first name!",
+		"billingLastName": "Please enter your billing last name!",
+		"billingAddress": "Please enter your billing address",
+		"billingCity": "Please enter your billing city!",
+		"billingCountry": "Please select your billing country!",
+		"billingState": "Please select your billing state!",
+		"billingZip": "Please enter your billing zip code!",
+		"cc_type": "Please select card payment method!",
+		"cc_number": "Please enter valid card number!",
+		"expmonth": "Please select valid expiry month!",
+		"expyear": "Please select valid expiry year!",
+		"cvv": "Please enter valid CVV!",
+		"billingAgreeCheckbox": "Please confirm and agree the billing terms and conditions!",
+		"additionalCheckbox": "Please confirm additional checkbox",
+		"additionalRadio": "Please confirm additional radio button!",
+		"coupon_code": "Please enter coupon/promo code!",
+		"message": "Please enter a message",
+		"grecaptcha_value": "Please verify the captcha"
+	}
+}

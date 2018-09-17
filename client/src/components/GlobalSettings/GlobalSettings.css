@@ -1,0 +1,12 @@
+.GlobalSettings {
+    position: fixed;
+    left: 303px;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    border-top: 2px solid #ccc;
+    background-color: rgb(219, 217, 217);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
